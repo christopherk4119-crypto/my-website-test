@@ -52,75 +52,93 @@ function FadeUp({ children, delay = 0, className = "" }: FadeUpProps) {
 /* ─── Data ───────────────────────────────────────────────── */
 const services = [
   {
+    icon: AlertTriangle,
+    title: "Emergency Power Restoration",
+    desc: "Rapid response for power outages, meter base repairs, and garage wiring failures. Merwan gets your power back fast.",
+    tags: ["Power outages", "Meter base repair", "Garage wiring", "Rapid response"],
+  },
+  {
     icon: Home,
-    title: "Residential Electrical",
-    desc: "Full-service home electrical — from outlet replacements to complete rewires. Safe, code-compliant, and backed by our guarantee.",
-    tags: ["Panel upgrades", "Outlet & lighting", "Home rewiring", "Safety inspections"],
+    title: "Basement & Development",
+    desc: "Full electrical for basement suites and home developments — roughed-in, inspected, and ready for occupancy permits.",
+    tags: ["Basement suites", "Rough-in wiring", "Permit & inspection", "Dev electrical"],
   },
   {
     icon: Building2,
-    title: "Commercial Electrical",
-    desc: "Reliable commercial installations and maintenance that keep your business running. We minimise downtime and pass inspection first time.",
-    tags: ["Office fit-outs", "Industrial wiring", "Code compliance", "Maintenance contracts"],
-  },
-  {
-    icon: Car,
-    title: "EV Charger Installation",
-    desc: "Level 1 & 2 charger installation for homes and businesses. Compatible with Tesla, Ford, GM, and all major EV brands.",
-    tags: ["Level 1 & 2 chargers", "Panel assessment", "Smart chargers", "Permit handling"],
+    title: "Commercial Excellence",
+    desc: "Trusted by Calgary businesses like Shawarma Ave. Code-compliant commercial installs that pass inspection first time.",
+    tags: ["Commercial fit-outs", "Code compliance", "First-pass inspection", "Local businesses"],
   },
   {
     icon: Zap,
-    title: "Panel Upgrades",
-    desc: "Upgrade from 60A or 100A to 200A–400A. Essential for modern homes with EV chargers, hot tubs, and high-draw appliances.",
-    tags: ["100A – 400A upgrades", "Load calculations", "Safety breakers", "Permit & inspection"],
+    title: "Panel Replacements",
+    desc: "Upgrade aging panels to handle modern power demands — EV chargers, hot tubs, and high-draw appliances.",
+    tags: ["Panel upgrades", "Load calculations", "Safety breakers", "Permit & inspection"],
   },
   {
-    icon: AlertTriangle,
-    title: "24 / 7 Emergency",
-    desc: "Electrical emergencies don't keep business hours — and neither do we. Average response under 60 minutes across Calgary.",
-    tags: ["Around-the-clock", "<60 min response", "Power restoration", "Hazard containment"],
+    icon: Car,
+    title: "Install EV Chargers",
+    desc: "Level 1 & 2 EV charger installation for homes and businesses. Compatible with all major vehicle brands.",
+    tags: ["Level 1 & 2 chargers", "Panel assessment", "Smart chargers", "Permit handling"],
   },
   {
     icon: Wrench,
-    title: "Electrical Inspections",
-    desc: "Pre-purchase, insurance, and code-compliance inspections. Detailed written reports accepted by all major Calgary insurers.",
-    tags: ["Pre-purchase", "Insurance docs", "Code compliance", "Written report"],
+    title: "Lighting & Home Upgrades",
+    desc: "Pot lights, feature lighting, outdoor fixtures, and full home & business renovation electrical work.",
+    tags: ["Pot lights", "Outdoor lighting", "Home renovations", "Business upgrades"],
+  },
+  {
+    icon: ShieldCheck,
+    title: "Wire Hot Tub & AC",
+    desc: "Safe, dedicated circuit installation for hot tubs, air conditioners, and high-draw equipment.",
+    tags: ["Hot tub wiring", "AC circuits", "Dedicated lines", "Safety-code approved"],
+  },
+  {
+    icon: Building2,
+    title: "Home & Business Renovations",
+    desc: "Full renovation electrical from demo to final inspection. Kitchens, additions, commercial renos — done right.",
+    tags: ["Kitchen renos", "Additions", "Commercial renos", "Full scope"],
+  },
+  {
+    icon: CheckCircle2,
+    title: "Satisfaction Guaranteed",
+    desc: "Every job is backed by Merwan's personal guarantee — code-compliant, inspector-approved, or we make it right.",
+    tags: ["Free estimates", "Licensed & insured", "Inspector-approved", "Personal guarantee"],
   },
 ];
 
 const credentials = [
-  { icon: Award, label: "BBB Accredited", sub: "A+ Rating" },
-  { icon: BadgeCheck, label: "Red Seal Certified", sub: "Master Electricians" },
-  { icon: ShieldCheck, label: "Fully Insured", sub: "$5M Liability" },
-  { icon: CheckCircle2, label: "Safety Codes", sub: "Officer Approved" },
+  { icon: BadgeCheck, label: "Master Electrician", sub: "Merwan — Licensed" },
+  { icon: ShieldCheck, label: "Fully Insured", sub: "Licensed & Certified" },
+  { icon: Award, label: "5-Star Local Rating", sub: "Calgary Trusted" },
+  { icon: CheckCircle2, label: "Inspector-Approved", sub: "First-pass guaranteed" },
 ];
 
 const stats = [
-  { value: "15+", label: "Years in Calgary", pulse: true },
-  { value: "2,500+", label: "Projects completed", pulse: false },
-  { value: "4.9 ★", label: "Google rating", pulse: true },
-  { value: "<60 min", label: "Emergency response", pulse: false },
+  { value: "5 ★", label: "5-Star Local Rating", pulse: true },
+  { value: "Licensed", label: "Master Electrician", pulse: false },
+  { value: "Free", label: "Estimates", pulse: true },
+  { value: "24 / 7", label: "Emergency Service", pulse: false },
 ];
 
 const testimonials = [
   {
-    name: "Sarah M.",
+    name: "Shawarma Ave",
+    role: "Local Business · Calgary",
+    rating: 5,
+    text: "Merwan handled our full commercial electrical and passed the Safety Codes inspection on the first try. On schedule, on budget, and zero headaches. We won't call anyone else.",
+  },
+  {
+    name: "Ahmad K.",
     role: "Homeowner · NW Calgary",
     rating: 5,
-    text: "Restore Electric upgraded our panel and installed two EV chargers in a single day. The quote was exact — zero surprises on the invoice. I've already referred them to three neighbours.",
+    text: "Called Merwan for an emergency power outage late at night. He showed up fast, found the issue quickly, and had everything restored the same evening. Incredibly professional.",
   },
   {
-    name: "James T.",
-    role: "Property Manager · Airdrie",
+    name: "Sandra T.",
+    role: "Homeowner · Edgemont, Calgary",
     rating: 5,
-    text: "Called at 9 pm on a Sunday with a tripped main breaker in a multi-unit building. Technician arrived in 45 minutes, diagnosed a faulty breaker, and had power restored before midnight. Exceptional.",
-  },
-  {
-    name: "Linda K.",
-    role: "Business Owner · SE Calgary",
-    rating: 5,
-    text: "Full commercial fit-out for our new office. On schedule, on budget, passed Safety Codes on the first inspection. That last part alone saved us two weeks of delays.",
+    text: "Merwan wired our basement suite and installed an EV charger. Free estimate, fair price, passed inspection first time. He genuinely cares about doing the job right.",
   },
 ];
 
@@ -130,7 +148,15 @@ const problems = [
   { icon: Clock, title: "Slow EV charging", desc: "Level 1 chargers add just 5 km of range per hour. A panel-aware Level 2 install changes everything." },
 ];
 
-const areas = ["Calgary", "Airdrie", "Cochrane", "Okotoks", "Chestermere", "Strathmore", "High River", "Crossfield", "Carstairs", "Olds"];
+const areas = ["NW Calgary (Edgemont)", "NE Calgary", "Downtown Calgary", "South Calgary", "All Calgary Communities & Beyond"];
+
+const faqs = [
+  { q: "What areas do you serve?", a: "All of Calgary — NW, NE, Downtown, South — and surrounding communities. If you're unsure, just call." },
+  { q: "Do you offer emergency power restoration?", a: "Yes. Merwan provides rapid response for power outages, meter base failures, and urgent electrical issues." },
+  { q: "Do you handle commercial projects?", a: "Absolutely. Restore Electric is trusted by local businesses like Shawarma Ave for full commercial electrical work." },
+  { q: "Are you licensed and insured?", a: "Yes — Merwan is a fully licensed, insured, and certified Master Electrician operating in Calgary, AB." },
+  { q: "Do you offer free estimates?", a: "Yes. Contact Merwan for a free, no-obligation estimate on any residential or commercial project." },
+];
 
 /* ─── Navbar ─────────────────────────────────────────────── */
 function Navbar() {
@@ -165,11 +191,11 @@ function Navbar() {
 
         {/* CTA */}
         <a
-          href="tel:+14031234567"
+          href="tel:+14034723080"
           className="hidden md:flex items-center gap-2 bg-[#F97316] hover:bg-[#EA6C0A] text-white font-semibold text-sm px-5 py-2 rounded-full transition-colors duration-200 cursor-pointer"
         >
           <Phone className="w-3.5 h-3.5" aria-hidden="true" />
-          (403) 123-4567
+          (403) 472-3080
         </a>
 
         {/* Mobile toggle */}
@@ -195,11 +221,11 @@ function Navbar() {
             </a>
           ))}
           <a
-            href="tel:+14031234567"
+            href="tel:+14034723080"
             className="flex items-center gap-2 bg-[#F97316] text-white font-semibold text-sm px-5 py-2.5 rounded-full w-fit cursor-pointer mt-1"
           >
             <Phone className="w-3.5 h-3.5" aria-hidden="true" />
-            (403) 123-4567
+            (403) 472-3080
           </a>
         </div>
       )}
@@ -223,7 +249,7 @@ export default function RestoreElectricPage() {
               {/* Trust badge */}
               <div className="inline-flex items-center gap-2 bg-[#1E40AF]/20 border border-[#3B82F6]/30 text-[#93C5FD] text-xs font-medium px-4 py-1.5 rounded-full">
                 <BadgeCheck className="w-3.5 h-3.5" aria-hidden="true" />
-                Calgary&apos;s Trusted Master Electricians · BBB Accredited
+                Calgary&apos;s Trusted Electrical Experts · Master Electrician Merwan
               </div>
 
               <h1 className="font-heading font-black text-4xl md:text-6xl lg:text-[5.5rem] text-white leading-[1.05] tracking-tight">
@@ -233,7 +259,7 @@ export default function RestoreElectricPage() {
               </h1>
 
               <p className="text-slate-400 text-base md:text-lg max-w-xl leading-relaxed font-body">
-                Restore Electric delivers safe, permit-pulled, code-compliant electrical work for Calgary homeowners and businesses — backed by 15+ years and 2,500+ completed projects.
+                Master Electrician Merwan delivers code-compliant, inspector-approved electrical work for Calgary homes and businesses. Free estimates. Emergency service available.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-3 mt-1">
@@ -244,10 +270,10 @@ export default function RestoreElectricPage() {
                   Get a Free Quote <ArrowRight className="w-4 h-4" aria-hidden="true" />
                 </a>
                 <a
-                  href="tel:+14031234567"
+                  href="tel:+14034723080"
                   className="flex items-center justify-center gap-2 border border-white/15 hover:border-white/35 hover:bg-white/5 text-white px-8 py-3.5 rounded-full transition-colors duration-200 cursor-pointer"
                 >
-                  <Phone className="w-4 h-4" aria-hidden="true" /> Call (403) 123-4567
+                  <Phone className="w-4 h-4" aria-hidden="true" /> Call (403) 472-3080
                 </a>
               </div>
 
@@ -375,8 +401,8 @@ export default function RestoreElectricPage() {
               </div>
               {/* Floating badge */}
               <div className="absolute -bottom-6 -right-4 md:-right-8 bg-[#1E40AF] rounded-2xl px-5 py-4 shadow-xl glow-blue">
-                <div className="font-heading font-black text-3xl text-white">15+</div>
-                <div className="text-[#93C5FD] text-xs font-medium">Years Serving Calgary</div>
+                <div className="font-heading font-black text-3xl text-white">5 ★</div>
+                <div className="text-[#93C5FD] text-xs font-medium">5-Star Calgary Rating</div>
               </div>
             </div>
           </FadeUp>
@@ -389,10 +415,10 @@ export default function RestoreElectricPage() {
               <span className="text-[#F97316]">Electrical Contractor</span>
             </h2>
             <p className="text-slate-400 leading-relaxed mb-4 font-body">
-              Founded in Calgary in 2009, Restore Electric is a locally owned electrical contractor serving homeowners and businesses across Calgary and surrounding communities. We are a BBB Accredited Business with an A+ rating and a team of Red Seal certified master electricians.
+              Restore Electric is a locally owned electrical contractor based in Edgemont, NW Calgary. Master Electrician Merwan serves homeowners and businesses across all Calgary communities — bringing licensed, insured, and code-compliant work to every project.
             </p>
             <p className="text-slate-400 leading-relaxed mb-8 font-body">
-              Every job we take is permit-pulled, properly inspected, and backed by our written workmanship warranty. We believe the job isn&apos;t done until it passes the Safety Codes Officer inspection — because your family&apos;s safety depends on it.
+              Every job is permit-pulled, properly inspected, and backed by a personal satisfaction guarantee. Merwan believes the job isn&apos;t done until it passes the Safety Codes Officer inspection the first time — because your family&apos;s safety depends on it.
             </p>
 
             {/* Credential grid */}
@@ -467,7 +493,36 @@ export default function RestoreElectricPage() {
         </div>
       </section>
 
-      {/* ── 8. CONTACT CTA ── */}
+      {/* ── 8. FAQ ── */}
+      <section className="py-24 px-4">
+        <div className="max-w-3xl mx-auto">
+          <FadeUp className="text-center mb-14">
+            <p className="text-[#3B82F6] text-sm font-semibold uppercase tracking-widest mb-3 font-body">FAQ</p>
+            <h2 className="font-heading font-bold text-3xl md:text-5xl text-white mb-4">
+              Common Questions
+            </h2>
+          </FadeUp>
+          <div className="flex flex-col gap-4">
+            {faqs.map((faq, i) => (
+              <FadeUp key={i} delay={i * 0.07}>
+                <div className="bg-[#0A0A14] border border-[rgba(59,130,246,0.15)] hover:border-[#3B82F6]/35 rounded-2xl px-6 py-5 transition-colors duration-200 cursor-default">
+                  <div className="flex items-start gap-3">
+                    <div className="w-6 h-6 rounded-full bg-[#1E40AF]/20 flex items-center justify-center shrink-0 mt-0.5">
+                      <ChevronRight className="w-3.5 h-3.5 text-[#3B82F6]" aria-hidden="true" />
+                    </div>
+                    <div>
+                      <p className="font-heading font-semibold text-white text-sm mb-1.5">{faq.q}</p>
+                      <p className="text-slate-400 text-sm leading-relaxed font-body">{faq.a}</p>
+                    </div>
+                  </div>
+                </div>
+              </FadeUp>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── 9. CONTACT CTA ── */}
       <section id="contact" className="py-24 px-4 bg-[#0A0A14]">
         <div className="max-w-7xl mx-auto">
           <FadeUp className="text-center mb-14">
@@ -485,10 +540,10 @@ export default function RestoreElectricPage() {
             {/* Info cards */}
             <div className="lg:col-span-2 flex flex-col gap-4">
               {[
-                { icon: Phone, label: "Phone", value: "(403) 123-4567", sub: "24 / 7 Emergency Line", href: "tel:+14031234567" },
-                { icon: Mail, label: "Email", value: "info@restoreelectric.ca", sub: "Reply within 1 business day", href: "mailto:info@restoreelectric.ca" },
-                { icon: MapPin, label: "Location", value: "Calgary, Alberta", sub: "Serving Calgary & region", href: "#" },
-                { icon: Clock, label: "Hours", value: "Mon – Fri  7 am – 6 pm", sub: "Sat 8 am – 4 pm · 24/7 Emergency", href: "#" },
+                { icon: Phone, label: "Phone", value: "(403) 472-3080", sub: "24 / 7 Emergency Service", href: "tel:+14034723080" },
+                { icon: Mail, label: "Email", value: "restoreelectricyyc@gmail.com", sub: "Free estimates — reply same day", href: "mailto:restoreelectricyyc@gmail.com" },
+                { icon: MapPin, label: "Based In", value: "Edgemont, NW Calgary", sub: "Serving all Calgary & beyond", href: "#" },
+                { icon: Clock, label: "Availability", value: "Mon – Sat  7 am – 7 pm", sub: "24 / 7 Emergency Response", href: "#" },
               ].map((item) => (
                 <a
                   key={item.label}
@@ -621,18 +676,19 @@ export default function RestoreElectricPage() {
               <div>
                 <h4 className="text-white font-semibold text-sm mb-3 font-heading">Services</h4>
                 <ul className="space-y-2 text-sm text-slate-500 font-body">
-                  {services.map((s) => (
-                    <li key={s.title}>{s.title}</li>
+                  {["Panel Upgrades", "EV Chargers", "Basement Dev", "Emergency Repair", "Garage Wiring", "Hot Tub & AC Wiring"].map((s) => (
+                    <li key={s}>{s}</li>
                   ))}
                 </ul>
               </div>
               <div>
                 <h4 className="text-white font-semibold text-sm mb-3 font-heading">Contact</h4>
                 <ul className="space-y-2 text-sm text-slate-500 font-body">
-                  <li>(403) 123-4567</li>
-                  <li>info@restoreelectric.ca</li>
-                  <li>Calgary, Alberta</li>
-                  <li>Mon–Fri 7am–6pm</li>
+                  <li>(403) 472-3080</li>
+                  <li>restoreelectricyyc@gmail.com</li>
+                  <li>Edgemont, NW Calgary</li>
+                  <li>Mon–Sat 7am–7pm</li>
+                  <li>24/7 Emergency</li>
                 </ul>
               </div>
             </div>
@@ -640,7 +696,7 @@ export default function RestoreElectricPage() {
 
           <div className="border-t border-white/5 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-600 font-body">
             <span>© {new Date().getFullYear()} Restore Electric Ltd. All rights reserved.</span>
-            <span>BBB Accredited · Red Seal Certified · $5M Insured · Calgary, AB</span>
+            <span>Licensed Master Electrician · Fully Insured · Edgemont, Calgary, AB</span>
           </div>
         </div>
       </footer>
