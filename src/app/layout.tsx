@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Restore Electric | Calgary's Trusted Master Electricians",
+  title: "Propaper Wallpaper Services | Calgary's Most Experienced Wallpaper Installers",
   description:
-    "Calgary's trusted master electricians for residential and commercial projects. EV charger installation, panel upgrades, wiring, and 24/7 emergency electrical services.",
+    "Calgary's most experienced wallpaper and mural installation specialists since 2013. Thousands of completed jobs. Residential, commercial, hotels, condos. Call Charlie: 587-777-4131.",
 };
 
 export default function RootLayout({
