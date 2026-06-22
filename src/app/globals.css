@@ -1,23 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800;900&display=swap');
 @import "tailwindcss";
 
 :root {
-  --background: #0a0a0f;
-  --foreground: #f0f0f0;
+  --background: #000000;
+  --foreground: #f1f5f9;
+  --primary: #1E40AF;
+  --primary-light: #3B82F6;
+  --cta: #F97316;
+  --cta-hover: #EA6C0A;
+  --surface: #0A0A14;
+  --surface-2: #0F0F1E;
+  --border: rgba(59, 130, 246, 0.15);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-heading: 'Poppins', sans-serif;
+  --font-body: 'Open Sans', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  font-family: 'Open Sans', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
-html {
-  scroll-behavior: smooth;
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Glow utility */
+.glow-blue {
+  box-shadow: 0 0 40px rgba(30, 64, 175, 0.3), 0 0 80px rgba(30, 64, 175, 0.1);
+}
+.glow-orange {
+  box-shadow: 0 0 30px rgba(249, 115, 22, 0.4);
+}
+
+/* Pulse animation for metrics */
+@keyframes metric-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+.metric-pulse {
+  animation: metric-pulse 2.5s ease-in-out infinite;
 }
